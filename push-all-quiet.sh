@@ -21,6 +21,6 @@ git submodule --quiet foreach "git checkout main --quiet ; git pull --quiet; git
 echo '21'
 git add . > /dev/null
 echo '23'
-git commit --quiet -m '$COMMITMESSAGE'
+git commit --quiet -m '$COMMITMESSAGE' --quiet
 echo '25'
 git push --quiet
