@@ -11,13 +11,13 @@ normal=`tput sgr0`
 git pull --quiet
 git add . > /dev/null
 echo '13'
-git commit --quiet -m $COMMITMESSAGE
+git commit -m $COMMITMESSAGE --quiet
 echo '15'
 git push --quiet
 echo '17'
 git submodule --quiet foreach "git fetch origin main --quiet"
 echo '19'
-git submodule --quiet foreach "git checkout --quiet main  ; echo 'a' ; git pull --quiet; echo 'b' ;  git add . > /dev/null; echo 'c' ;  git commit --quiet -m '$COMMITMESSAGE' --quiet; echo 'd' ;  git push --quiet"
+git submodule --quiet foreach "git checkout --quiet main  ; echo 'a' ; git pull --quiet; echo 'b' ;  git add . > /dev/null; echo 'c' ;  git commit -m '$COMMITMESSAGE' --quiet; echo 'd' ;  git push --quiet"
 echo '21'
 git add . > /dev/null
 echo '23'
