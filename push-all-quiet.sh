@@ -24,6 +24,6 @@ git submodule --quiet foreach "git checkout --quiet main  ; echo 'a' ; git pull 
 echo 'Syncing changed submodules with parent repo'
 git add . > /dev/null
 echo '23'
-git commit -m '$COMMITMESSAGE' --quiet
+git commit -m $COMMITMESSAGE --quiet
 echo 'Pushing parent repo'
 git push --quiet
