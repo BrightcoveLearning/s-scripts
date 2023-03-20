@@ -20,27 +20,10 @@ git push --quiet
 echo 'Getting all submodules'
 git submodule --quiet foreach "git fetch origin main --quiet"
 echo 'Writing to submouldes'
-git submodule --quiet foreach "git checkout --quiet main  ; echo 'a' ; git pull --quiet; echo 'b' ;  git add . > /dev/null; echo 'c' ; git commit -m '$COMMITMESSAGE' --quiet; echo 'd' ;  git push --quiet" --quiet
+git submodule --quiet foreach "git checkout --quiet main  ; echo 'a' ; git pull --quiet; echo 'b' ;  git add . > /dev/null; echo 'c' ; git commit  --quiet -m '$COMMITMESSAGE'; echo 'd' ;  git push --quiet" --quiet
 echo 'Syncing changed submodules with parent repo'
 git add . > /dev/null
 echo 'Committing changes'
 git commit -m '$COMMITMESSAGE' --quiet
 echo 'Pushing parent repo changes'
 git push --quiet
-
-a
-b
-c
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-d
-a
-b
-c
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-d
