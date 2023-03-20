@@ -12,8 +12,8 @@ git pull --quiet
 git add . > /dev/null
 git commit --quiet -m $COMMITMESSAGE
 git push --quiet
-git submodule --quiet foreach "git fetch origin main --quiet"
-git submodule --quiet foreach "git checkout main --quiet ; git pull --quiet; git add . > /dev/null; git commit --quiet -m '$COMMITMESSAGE'; git push --quiet"
+git submodule --quiet foreach "git fetch origin main || true"
+git submodule --quiet foreach "git checkout main || true ; git pull || true; git add . > /dev/null; git commit -m '$COMMITMESSAGE' || true; git push || true"
 git add . > /dev/null
 git commit --quiet -m '$COMMITMESSAGE'
 git push --quiet
